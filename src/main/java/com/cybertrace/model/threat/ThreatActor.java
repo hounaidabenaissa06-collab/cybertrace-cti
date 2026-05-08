@@ -1,7 +1,9 @@
 package com.cybertrace.model.threat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.cybertrace.interfaces.Analyzable;
-import java.util.*;
 
 public abstract class ThreatActor implements Analyzable {
     private String id, name, origin;
@@ -10,13 +12,24 @@ public abstract class ThreatActor implements Analyzable {
 
     public ThreatActor(String id, String name,
                        String origin, ThreatMotivation motivation) {
-        this.id = id; this.name = name;
-        this.origin = origin; this.motivation = motivation;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.motivation = motivation;
     }
 
+    // Méthodes abstraites
     public abstract ThreatLevel getThreatLevel();
     public abstract String getSummary();
 
+    // Viennent de Analyzable — abstraites ici
+    @Override
+    public abstract String analyze();
+
+    @Override
+    public abstract double getRiskScore();
+
+    // Méthodes concrètes
     public void addCampaign(String id) { campaignIds.add(id); }
     public String getId() { return id; }
     public String getName() { return name; }
