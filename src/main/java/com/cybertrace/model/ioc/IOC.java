@@ -1,5 +1,6 @@
 package com.cybertrace.model.ioc;
 
+feature/ioc-security
 import com.cybertrace.model.enums.IOCType;
 import java.time.LocalDate;
 import java.util.*;
@@ -27,4 +28,17 @@ public abstract class IOC {
     public String getId(){ return id; }
     public String getValue(){ return value; }
     public int getConfidence(){ return confidence; }
+
+public class IOC {
+
+    private String value;
+
+    public IOC(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+main
 }
