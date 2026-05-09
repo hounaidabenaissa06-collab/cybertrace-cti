@@ -3,7 +3,7 @@ package com.cybertrace.interfaces;
 /**
  * Interface pour les entités pouvant être exportées.
  * Implémentée par Campaign et tout objet exportable en rapport.
- */
+ */ 
 public interface Exportable {
 
     /**
