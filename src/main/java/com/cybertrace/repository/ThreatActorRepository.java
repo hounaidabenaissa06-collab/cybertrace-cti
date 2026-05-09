@@ -81,9 +81,7 @@ public class ThreatActorRepository implements GenericRepository<ThreatActor, Str
         return result;
     }
 
-    // ────────────────────────────────────────────────────────────────────
     // PERSISTANCE PRIVÉE
-    // ────────────────────────────────────────────────────────────────────
 
     /**
      * Sérialise le cache en JSON, chiffre avec AES, écrit sur disque.
