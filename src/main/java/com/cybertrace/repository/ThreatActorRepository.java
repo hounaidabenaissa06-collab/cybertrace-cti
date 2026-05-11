@@ -3,7 +3,7 @@ package com.cybertrace.repository;
 import com.cybertrace.model.threat.ThreatActor;
 import java.util.*;
 
-public class ThreatActorRepository {
+public abstract class ThreatActorRepository{
     private Map<String, ThreatActor> store = new HashMap<>();
 
     public void save(ThreatActor actor) {
@@ -29,4 +29,5 @@ public class ThreatActorRepository {
     public void delete(String id) {
         store.remove(id);
     }
+    public abstract void deleteById(String id);
 }

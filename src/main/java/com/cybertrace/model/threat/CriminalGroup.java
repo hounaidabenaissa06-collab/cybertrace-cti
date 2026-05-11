@@ -1,10 +1,11 @@
 package com.cybertrace.model.threat;
 
 public class CriminalGroup extends ThreatActor {
-
+    private String specialty;
     public CriminalGroup(String id,
                          String name,
-                         String origin) {
+                         String origin,
+                        String specialty) {
 
         super(
             id,
@@ -12,6 +13,7 @@ public class CriminalGroup extends ThreatActor {
             origin,
             ThreatMotivation.FINANCIAL
         );
+         this.specialty = specialty;
     }
 
     @Override

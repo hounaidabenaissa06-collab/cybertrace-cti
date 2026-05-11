@@ -30,6 +30,8 @@ public abstract class ThreatActor implements Analyzable {
     public abstract ThreatLevel getThreatLevel();
 
     public abstract String getSummary();
+    public abstract String analyze();
+    public abstract double getRiskScore();
 
     public void addCampaign(String id) {
         campaignIds.add(id);
@@ -53,5 +55,16 @@ public abstract class ThreatActor implements Analyzable {
 
     public List<String> getCampaignIds() {
         return campaignIds;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getType() {
+        return this.getClass().getSimpleName();
     }
 }
