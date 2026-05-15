@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Interface générique pour les entités permettant la recherche.
  * Le paramètre de type T représente le type d'objet retourné par les recherches.
- * Exemple : Searchable<ThreatActor> pour rechercher des acteurs.
+* Exemple : {@code Searchable<ThreatActor>} pour rechercher des acteurs.
  */
 public interface Searchable<T> {
 
