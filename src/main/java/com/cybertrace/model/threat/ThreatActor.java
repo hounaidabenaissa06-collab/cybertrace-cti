@@ -1,5 +1,6 @@
 package com.cybertrace.model.threat;
-
+import java.util.HashSet;
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +12,10 @@ public abstract class ThreatActor implements Analyzable {
     private String id;
     private String name;
     private String origin;
+    private Set<String> tags = new HashSet<>();
 
     private ThreatMotivation motivation;
-
+    
     private List<String> campaignIds = new ArrayList<>();
 
     public ThreatActor(String id,
@@ -67,4 +69,11 @@ public abstract class ThreatActor implements Analyzable {
     public String getType() {
         return this.getClass().getSimpleName();
     }
+    public void addTag(String tag) {
+    	tags.add(tag);
+}
+    public Set<String> getTags() {
+    	return tags;
+}
+
 }
