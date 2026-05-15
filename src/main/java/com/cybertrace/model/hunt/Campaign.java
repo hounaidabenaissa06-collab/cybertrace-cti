@@ -91,4 +91,7 @@ public class Campaign implements Analyzable, Exportable {
     public CampaignStatus getStatus() {
         return status;
     }
+    public String getActorId()            { return actorId; }
+    public List<IOC> getIOCs()            { return iocs; }
+    public List<Technique> getTechniques(){ return techniques; }
 }
