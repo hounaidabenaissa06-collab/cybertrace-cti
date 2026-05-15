@@ -7,8 +7,7 @@ import java.util.Base64;
 public class EncryptionService {
 
     // Clé AES de 16 caractères = AES 128 bits
-    private static final String SECRET_KEY = "CyberTraceKey1";
-
+private static final String SECRET_KEY = "cybertracekey123";
     /**
      * Chiffre une chaîne de texte avec AES.
      */
