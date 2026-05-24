@@ -125,7 +125,14 @@ public class ThreatActorService {
     public List<ThreatActor> filterByType(String type) {
         String t = type.toUpperCase();
         return repo.findAll().stream()
-                .filter(a -> a.getType().equals(t))
+                public List<ThreatActor> filterByType(String type) {
+    return repo.findAll().stream()
+        .filter(a -> {
+            String simpleName = a.getClass().getSimpleName().toUpperCase();
+            return simpleName.contains(type.toUpperCase());
+       })
+        .collect(Collectors.toList());
+}
                 .collect(Collectors.toList());
     }
 }
