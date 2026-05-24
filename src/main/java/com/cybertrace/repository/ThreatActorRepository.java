@@ -1,33 +1,19 @@
 package com.cybertrace.repository;
 
 import com.cybertrace.model.threat.ThreatActor;
-import java.util.*;
+import java.util.List;
 
-public abstract class ThreatActorRepository{
-    private Map<String, ThreatActor> store = new HashMap<>();
+/**
+ * Contrat du repository pour ThreatActor.
+ * Toute la logique de stockage est dans les sous-classes.
+ */
+public abstract class ThreatActorRepository {
 
-    public void save(ThreatActor actor) {
-        store.put(actor.getId(), actor);
-    }
-
-    public ThreatActor findById(String id) {
-        return store.get(id);
-    }
-
-    public List<ThreatActor> findAll() {
-        return new ArrayList<>(store.values());
-    }
-
-    public boolean exists(String id) {
-        return store.containsKey(id);
-    }
-
-    public void update(ThreatActor actor) {
-        store.put(actor.getId(), actor);
-    }
-
-    public void delete(String id) {
-        store.remove(id);
-    }
+    public abstract void save(ThreatActor actor);
+    public abstract ThreatActor findById(String id);
+    public abstract List<ThreatActor> findAll();
+    public abstract boolean exists(String id);
+    public abstract void update(ThreatActor actor);
+    public abstract void delete(String id);
     public abstract void deleteById(String id);
 }
