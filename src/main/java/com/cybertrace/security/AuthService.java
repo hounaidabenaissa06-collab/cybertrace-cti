@@ -6,7 +6,7 @@ import java.util.Map;
 import com.cybertrace.exception.AuthenticationException;
 import com.cybertrace.model.user.User;
 import com.cybertrace.repository.UserRepository;
-import com.cybertrace.utils.HashUtils;
+import com.cybertrace.security.HashUtils;
 
 public class AuthService {
 
