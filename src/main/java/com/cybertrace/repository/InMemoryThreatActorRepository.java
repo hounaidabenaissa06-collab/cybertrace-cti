@@ -36,4 +36,19 @@ public class InMemoryThreatActorRepository extends ThreatActorRepository {
     public void deleteById(String id) {
         store.remove(id);
     }
+   
+    @Override
+    public boolean exists(String id) {
+        return store.containsKey(id);
+    }
+
+    @Override
+    public void update(ThreatActor actor) {
+       store.put(actor.getId(), actor);
+    }
+
+    @Override
+    public void delete(String id) {
+        store.remove(id);
+    }
 }
