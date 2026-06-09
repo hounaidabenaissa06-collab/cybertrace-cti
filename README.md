@@ -43,17 +43,17 @@ com.cybertrace
 
 1. Cloner le projet :
 ```bash
-git clone <URL_DU_REPO>
+2.git clone <URL_DU_REPO>
 
-cd cybertrace-cti
+3.cd cybertrace-cti
 
-mvn clean test
+4.mvn clean test
 
-mvn clean test
+5.mvn clean test
 
-mvn exec:java -Dexec.mainClass="com.cybertrace.App"
+6.mvn exec:java -Dexec.mainClass="com.cybertrace.App"
 
-mvn test
+7.mvn test
 
 Auteurs :
 Kaoutar Nabil
