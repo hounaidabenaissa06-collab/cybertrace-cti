@@ -40,9 +40,9 @@ com.cybertrace
 - Maven
 
 ### Étapes
-
-1. Cloner le projet :
 ```bash
+1. Cloner le projet :
+
 2.git clone <URL_DU_REPO>
 
 3.cd cybertrace-cti
