@@ -31,23 +31,35 @@ com.cybertrace
 ├── exception/ # Exceptions personnalisées
 ├── interfaces/ # Interfaces et abstractions
 └── utils/ # Fonctions utilitaires
-
+---
 ## Installation et exécution
 
 ### Prérequis
-
 - Java 17
 - Maven
 
-### Étapes
+### Exécution du projet
+
+#### Option 1 
+- Ouvrir le projet dans IntelliJ IDEA ou Eclipse
+- Lancer la classe principale : `com.cybertrace.App`
+
+#### Option 2 (terminal)
+
+Compiler le projet :
 ```bash
-1. Cloner le projet :
+mvn clean install
 
-2.cd cybertrace-cti
+Lancer les tests :
+```bash
+mvn test
 
-3.mvn clean test
+Les tests couvrent :
+- IOCService
+- AuthService
+- ThreatActorService
+- Tests d’intégration APT
 
-4.mvn test
 
 Auteurs :
 Kaoutar Nabil
