@@ -31,7 +31,7 @@ com.cybertrace
 ├── exception/ # Exceptions personnalisées
 ├── interfaces/ # Interfaces et abstractions
 └── utils/ # Fonctions utilitaires
----
+```
 ## Installation et exécution
 
 ### Prérequis
@@ -49,11 +49,11 @@ com.cybertrace
 Compiler le projet :
 ```bash
 mvn clean install
-
+```
 Lancer les tests :
 ```bash
 mvn test
-
+```
 Les tests couvrent :
 - IOCService
 - AuthService
