@@ -21,7 +21,7 @@ Ce projet est le fruit du travail d’une équipe de 4 étudiants encadrés péd
 ## Architecture
 
 Le projet est structuré en plusieurs couches :
-
+```bash
 com.cybertrace
 │
 ├── model/ # Modèles métier (IOC, ThreatActor, APTGroup)
@@ -43,17 +43,11 @@ com.cybertrace
 ```bash
 1. Cloner le projet :
 
-2.git clone <URL_DU_REPO>
+2.cd cybertrace-cti
 
-3.cd cybertrace-cti
+3.mvn clean test
 
-4.mvn clean test
-
-5.mvn clean test
-
-6.mvn exec:java -Dexec.mainClass="com.cybertrace.App"
-
-7.mvn test
+4.mvn test
 
 Auteurs :
 Kaoutar Nabil
