@@ -121,18 +121,18 @@ public class ThreatActorService {
                 .collect(Collectors.toList());
     }
 
-    
+    /**
+     * Filtre les acteurs dont le nom de classe (APTGroup, CriminalGroup...)
+     * contient {@code type} (insensible à la casse).
+     *
+     * @param type Sous-chaîne à rechercher dans le nom du sous-type
+     */
     public List<ThreatActor> filterByType(String type) {
-        String t = type.toUpperCase();
         return repo.findAll().stream()
-                public List<ThreatActor> filterByType(String type) {
-    return repo.findAll().stream()
-        .filter(a -> {
-            String simpleName = a.getClass().getSimpleName().toUpperCase();
-            return simpleName.contains(type.toUpperCase());
-       })
-        .collect(Collectors.toList());
-}
+                .filter(a -> {
+                    String simpleName = a.getClass().getSimpleName().toUpperCase();
+                    return simpleName.contains(type.toUpperCase());
+                })
                 .collect(Collectors.toList());
     }
 }
