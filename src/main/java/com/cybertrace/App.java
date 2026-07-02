@@ -1,6 +1,6 @@
 package com.cybertrace;
 
-import com.cybertrace.ui.MainMenu;
+import com.cybertrace.utils.MainMenu;
 
 /**
  * Point d'entrée principal de CyberTrace CTI Platform.
