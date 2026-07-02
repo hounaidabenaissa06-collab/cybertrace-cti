@@ -133,7 +133,25 @@ public class ThreatActorService {
                 .filter(a -> {
                     String simpleName = a.getClass().getSimpleName().toUpperCase();
                     return simpleName.contains(type.toUpperCase());
-                })
+                    /**
+     * Affiche un rapport formaté de tous les acteurs, triés par score
+     * de risque décroissant.
+     */
+                    public void printReport() {
+                       List<ThreatActor> all = repo.findAll().stream()
+                           .sorted(Comparator.comparingDouble(ThreatActor::getRiskScore).reversed())
+                           .collect(Collectors.toList());
+
+                        System.out.println("\n══════════════════════════════════════");
+                        System.out.println("   RAPPORT — ACTEURS (" + all.size() + ")");
+                        System.out.println("══════════════════════════════════════");
+                        for (ThreatActor a : all) {
+                            System.out.printf("  %-40s  Risk: %.1f  Niveau: %s%n",
+                           a.getSummary(), a.getRiskScore(), a.getThreatLevel());
+                        }
+                       System.out.println("══════════════════════════════════════\n");
+                     }
+                     })
                 .collect(Collectors.toList());
     }
 }
